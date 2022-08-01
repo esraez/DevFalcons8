@@ -1,0 +1,10 @@
+Conditionclass_assignment mo = new Conditionclass_assignment();
+string m1 = mo.Ifclassmethod(1);
+string m2 = mo.Ifclassmethod(12);
+system.debug (m1);
+system.debug(m2);
+Conditionclass_assignment mname = new Conditionclass_assignment();
+string q1 = mname.casemethod('January');
+string q2 = mname.casemethod('dece');
+system.debug (q1);
+system.debug(q2);

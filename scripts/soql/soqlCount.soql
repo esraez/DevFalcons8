@@ -1,0 +1,15 @@
+//get number of records
+//count(fieldname) get us the number of records where field is not blank
+select COUNT() from Contact;
+select COUNT(id) from Contact;
+select COUNT(mailingcity) from Contact;
+//aggragate functions: count, sum, avg, min, max
+//group by
+select leadsource,COUNT(Name) from lead group by leadsource;
+//group by + having, having is like where for group by(aggregation)
+//query returns accounts with duplicate names:
+select name,COUNT(id) from account group by Name having count(id)>1;
+//sum of amount for all opps which are not closed
+//sum of amount for all opps Stagename wise
+select Sum(amount) from Opportunity where IsClosed=False; 
+select Sum(amount), Stagename from Opportunity where IsClosed=False group by Stagename;

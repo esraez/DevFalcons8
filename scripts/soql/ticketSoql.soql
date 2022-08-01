@@ -1,0 +1,3 @@
+select id, Name, subject__c,status__c, Priority__c 
+    from Salesforce_ticket__c
+    WHERE Status__c!='' and Priority__c ='High'

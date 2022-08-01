@@ -1,0 +1,6 @@
+select id, Name, phone from account  WHERE Phone != NULL 
+select id, Name, phone from account  WHERE status_c !='New'
+
+select id, Name, phone, website, accountNumber from account  
+WHERE (Phone != NULL or website !=NULL) and AccountNumber!=NULL
+

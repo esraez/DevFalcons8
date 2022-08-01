@@ -1,0 +1,4 @@
+//get child (contact) from parent Account
+select id, name,(select lastname,firstname from contacts) from account
+//parent to child for custom objects
+select id, name,project_name__c,status__C,(select name,subject__c,priority__c from salesforce_tickets__R) from salesforce_project__c

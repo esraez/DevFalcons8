@@ -1,0 +1,6 @@
+//use order by fieldname
+//by default it is in ascending order
+//for descending write 'DESC'
+select id, Name from Account order by Name DESC
+//accounts created in las 90 days descending order
+select id, Name, CreatedDate from Account Where CreatedDate = LAST_90_DAYS order by CreatedDate DESC

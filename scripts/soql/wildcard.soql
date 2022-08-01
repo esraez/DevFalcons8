@@ -1,0 +1,6 @@
+//for wildcard use LIKE instead of =  % is the wildcard
+//A% starts with A
+//%A ends with A
+//%A% contains A
+//here we are fetching contacts where name starts with A
+select id, Name, MailingCity from Contact WHERE Name LIKE 'A%'
