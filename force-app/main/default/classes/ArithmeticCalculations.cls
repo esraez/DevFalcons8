@@ -1,3 +1,4 @@
+//arithmetic calculations
 public  class ArithmeticCalculations {
     public integer Addition(integer x,integer y) {
         integer z = x + y;
