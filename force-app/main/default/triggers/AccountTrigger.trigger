@@ -1,5 +1,16 @@
-trigger AccountTrigger on ACCOUNT (before insert, before update, after insert, after update) {
+trigger AccountTrigger on Account (before insert, before update, after insert, after update) {
+
     system.debug('====Trigger START====');
+    if (trigger.isBefore) {
+        AccountTriggerHandler.updateAccountDescription(Trigger.New, Trigger.Old, Trigger.NewMap, Trigger.OldMap);
+    }
+    
+    system.debug('====Trigger END====');
+}   
+
+
+
+/*system.debug('====Trigger START====');
     if(trigger.isAfter && trigger.isUpdate){
         integer countWebSiteUpdate = 0;
         map<id, account> trgOldMap = trigger.oldMap;
@@ -20,10 +31,9 @@ trigger AccountTrigger on ACCOUNT (before insert, before update, after insert, a
         }
         system.debug('Count of website updated accounts =' + countWebSiteUpdate);
        
-}
-    system.debug('====Trigger END====');
+
+    system.debug('====Trigger END====');*/
   
-}
    /*  system.debug('====Trigger START====');
     if(trigger.isAfter && trigger.isUpdate){
         map<id, account> trgOldMap = trigger.oldMap;
