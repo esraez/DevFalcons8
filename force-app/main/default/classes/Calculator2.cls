@@ -1,6 +1,6 @@
 public  class Calculator2 {
     public static String printAndReturnMessage(string msg) {
-        string r = msg;
+        string r = msg +'...OK cool';
         return r;
     }
     public static integer add(integer num1, integer num2){

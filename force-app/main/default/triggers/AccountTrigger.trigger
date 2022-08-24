@@ -4,6 +4,15 @@ trigger AccountTrigger on Account (before insert, before update, after insert, a
     if (trigger.isBefore) {
         AccountTriggerHandler.updateAccountDescription(Trigger.New, Trigger.Old, Trigger.NewMap, Trigger.OldMap);
     }
+    if(trigger.isAfter && trigger.isUpdate){
+        AccountTriggerHandler.updateVIPForAllContacts(Trigger.New, Trigger.Old, Trigger.NewMap, Trigger.OldMap);
+    }
+    if(Trigger.isAfter && trigger.isInsert){
+        /*AccountsQueueableExample aq =new 
+        AccountsQueueableExample(trigger.new);
+        Id jobId = system.enqueueJob(aq);
+        system.debug('job Id is ...' + jobId);*/
+    }
     
     system.debug('====Trigger END====');
 }   
