@@ -27,12 +27,16 @@ public class SalesforceProjectTriggerHandler {
        try{
         //create one Empty list of sf ticket
         List<Salesforce_Ticket__c> newSTlist = new List<Salesforce_Ticket__c>();
+        //customsettingname.getOrgDefaults ==> it will return ORG default values
+        DefaultTicketInfo__c ticketInfo = DefaultTicketInfo__c.getOrgDefaults();
         //for each project create new ticket
         for(Salesforce_Project__c eachSP: spTriggerNew){
             //create new ST
             Salesforce_Ticket__c st = new Salesforce_Ticket__c();
             st.Status__c = 'new';
-            st.Subject__c = 'Default ST';
+            st.Subject__c = ticketInfo.Subject__c;
+            st.Priority__c = 'High';
+            st.Description__c = ticketInfo.Description__c;
             st.Salesforce_Project__c = eachSP.id; //relationship id
             newSTlist.add(st);
         }

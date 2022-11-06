@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES BY RECORD TYPE : LEAD">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Select Industry..."
+                options={industryOptions}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div> Selected Industry: {selectedIndustry}</div>
+            <lightning-combobox
+                label="Select Rating..."
+                options={ratingOptions}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div> Selected Rating: {selectedRating}</div>
+            <lightning-combobox
+                label="Select Lead Source..."
+                options={leadSourceOptions}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div> Selected LeadSource: {selectedLeadSource}</div>
+            <lightning-combobox
+                label="Selct Status..."
+                options={statusOptions}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div> Selected Status: {selectedStatus}</div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="GET RECORD: ACCOUNT" icon-name="standard:account">
+        <div class="slds-var-m-around_medium ">
+        <strong> Approach 1: </strong> <br/>
+           Name: {name} <br/>
+           Type: {type} <br/>
+           Industry: {industry} <br/>
+           Annual Revenue: {revenue} <br/>
+           Rating: {rating} <br/>
+           Phone: {phone}
+        </div>
+        <div class="slds-var-m-around_medium">
+            <template if:true={account}>
+                <strong>Approach 2:</strong> <br/>
+                Name: {account.fields.Name.value} <br/>
+                Type: {account.fields.Type.displayValue} <br/>
+                Industry: {account.fields.Industry.displayValue} <br/>
+                Annual Revenue: {account.fields.AnnualRevenue.displayValue} <br/>
+                Rating: {account.fields.Rating.displayValue} <br/>
+                Phone: {account.fields.Phone.value}
+        </template>
+    </div>
+</lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="WIRED APEX 2" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <strong> Total {industryType} Acccounts: {total}</strong>
+            <div class="slds-box">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                      <span>1</span>
+                    </div>
+                    <div class="slds-col">
+                      <span>2</span>
+                    </div>
+                    <div class="slds-col">
+                      <span>3</span>
+                    </div>
+                    <div class="slds-col">
+                      <span>4</span>
+                    </div>
+                    <div class="slds-col">
+                        <span>4</span>
+                    </div>
+                  </div>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}>
+            </lightning-datatable>
+        </div>
+    </div>
+    </lightning-card>
+</template>

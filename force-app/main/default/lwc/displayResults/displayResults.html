@@ -1,0 +1,16 @@
+<template>
+    <strong>SEARCH RESULTS:</strong> <br/>
+    <!--Display results-->
+    <template if:true={result}>
+        <lightning-datatable
+            key-field="Id"
+            data={result}
+            columns={columns}>
+        </lightning-datatable>
+    </template>
+
+    <!--Display errors-->
+    <template if:true={error}>
+        {error}
+    </template>
+</template>

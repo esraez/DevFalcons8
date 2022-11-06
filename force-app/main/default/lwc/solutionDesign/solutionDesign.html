@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="MY NAME AND ROLE">
+       <div class="slds-var-m-around_medium">
+        
+            <lightning-input
+                type="text"
+                label="Enter Your Name"
+                value={name}
+                onchange={getName}>
+            </lightning-input>
+            
+            <lightning-combobox
+                label="ComboBox"
+                options={options}
+                value={role}
+                onchange={handleChange}>
+              
+            </lightning-combobox>
+            Hello my name is {name} and my role is {role}.
+    </div>  
+</lightning-card>
+        
+</template>

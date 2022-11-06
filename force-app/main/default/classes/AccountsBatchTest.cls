@@ -17,7 +17,7 @@ public class AccountsBatchTest {
 
          for (Integer i = 0; i < 500; i++) {
             account a3 = new account();
-            a3.name = 'PI Test';
+            a3.name = 'PI Test'+i;
             a3.Industry = 'Banking';
             a3.Type = 'Customer - Direct';
             listAcc.add(a3);
